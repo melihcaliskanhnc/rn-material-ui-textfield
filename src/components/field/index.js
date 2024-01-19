@@ -446,18 +446,7 @@ export default class TextField extends PureComponent {
   }
 
   inputProps() {
-    let store = {};
-
-    for (let key in TextInputPropTypes) {
-      if (key === 'defaultValue') {
-        continue;
-      }
-
-      if (key in this.props) {
-        store[key] = this.props[key];
-      }
-    }
-
+    const store = this.props;
     return store;
   }
 
